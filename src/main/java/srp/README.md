@@ -8,7 +8,7 @@ Now, while intuitively this might sound like a bad thing, it is actually a drivi
 
 ## Illustration
 
-### Disrespecting the principle os Single Responsability
+### Disrespecting the principle Single Responsibility
 ```
  // This method has several responsibilities
     // Responsibility: Save an employee is not a function of a domain class as Employee.
