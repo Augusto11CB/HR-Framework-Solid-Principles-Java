@@ -63,8 +63,13 @@ public abstract class Employee {
         return this.firstName + " " + this.lastName;
     }
 
+    // This method has several responsibilities
+    // Responsibility: Save an employee is not a function of a domain class as Employee.
+        // It should be implemented in a second component that is responsible for handle persistence
     public static void save(Employee employee){
+        // Responsibility: Exception handling
         try {
+            // Responsibility: Serialization
             StringBuilder sb = new StringBuilder();
             sb.append("### EMPLOYEE RECORD ####");
             sb.append(System.lineSeparator());
@@ -81,12 +86,15 @@ public abstract class Employee {
             sb.append(employee.monthlyIncome);
             sb.append(System.lineSeparator());
 
+            //Responsibility: File Access
             Path path = Paths.get(employee.getFullName()
                     .replace(" ","_") + ".rec");
             Files.write(path, sb.toString().getBytes());
 
+            // Responsibility: Logging
             System.out.println("Saved employee " + employee.toString());
         } catch (IOException e){
+            // Responsibility: Logging
             System.out.println("ERROR: Could not save employee. " + e);
         }
     }
