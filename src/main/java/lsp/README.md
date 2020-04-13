@@ -2,6 +2,8 @@
 
 The Liskov Substitution Principle states that if objects of type T are replaced with objects of type S, when S is a subtype of T, in a program, the program’s characteristics should not change (e.g. correctness).
 
+
+**LSP helps us create correct hierarchies between or objects**
 **Don't ask if some class "is a" other class, Instead prefer ask _Does the classA fully substitute the classB _**
 
 ## Liskov Substitution Requirements

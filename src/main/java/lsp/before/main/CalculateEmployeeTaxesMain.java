@@ -31,8 +31,8 @@ public class CalculateEmployeeTaxesMain {
 
         double totalTaxes = 0;
         for (Employee employee: employees){
-            //    [aug-lsp] Here an exception will be thrown because for SubContractor there is no TaxCalculator
-            // Subcontractors should calculate their own taxes, so we cannot implement a TaxCalculator for them
+            //    [aug-lsp] Here an exception will no longer be thrown because for SubContractor is a subtype of employee
+            // Subcontractors should calqculate their own taxes, so we cannot implement a TaxCalculator for them.
             TaxCalculator taxCalculator = TaxCalculatorFactory.create(employee);
 
             // compute individual tax
