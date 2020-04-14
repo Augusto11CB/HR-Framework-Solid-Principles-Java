@@ -3,3 +3,4 @@ The principle Interface Segregation states that **a class should not be forced t
 
 * A class should not be forced to depend on methods it does not use
 * Interfaces should be split up in such a way that it can properly describe the separate functionalities of your system
+
